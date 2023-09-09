@@ -1,6 +1,5 @@
 // import ListaLibros from "@/components/ListaLibros";
-import { ListaLibros } from "@/components/ListaLibros";
-import Image from "next/image";
+import ListaLibros from "@/components/ListaLibros";
 
 export default function Home() {
   return (
