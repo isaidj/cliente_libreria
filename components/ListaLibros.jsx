@@ -3,6 +3,7 @@ import imperio_final from "../assets/el_imperio_final.jpg";
 import nombre_del_viento from "../assets/el_nombre_del_viento.jpg";
 import senor_anillos from "../assets/el_senor_de_los_anillos.jpg";
 import Image from "next/image"; // Importamos el componente Image de Next.js ayuda a optimizar las imágenes
+import Link from "next/link";
 
 const libros = [
   {
@@ -51,12 +52,15 @@ export default ListaLibros;
 
 const Libro = ({ libro }) => {
   return (
-    <div className="bg-gray-200 p-5 my-5 shadow-lg rounded flex flex-col items-center">
+    <Link
+      className="bg-gray-200 p-5 my-5 shadow-lg rounded flex flex-col items-center"
+      href={`/libros/${libro.id}`}
+    >
       <Image src={libro.img} alt="Libro" width={200} height={300} />
       <p className="font-bold">Título: {libro.titulo}</p>
       <p className="font-bold">Autor: {libro.autor}</p>
 
       <p className="font-bold">Género: {libro.genero}</p>
-    </div>
+    </Link>
   );
 };
