@@ -88,6 +88,11 @@ const ActualizarPage = () => {
     console.log(value);
     actualizarLibro(value);
   };
+
+  const handleClose = () => {
+    setModal(false);
+    setSelectedLibro(null);
+  };
   return (
     <div className="flex flex-col   h-screen mt-8">
       <h1 className="text-lg text-center text-gray-950 font-bold">
@@ -179,7 +184,8 @@ const ActualizarPage = () => {
             </div>
             <div className="flex flex-row gap-4 justify-center">
               <button
-                onClick={() => setModal(false)}
+                onClick={() => handleClose()}
+                type="button"
                 className="bg-red-500 w-fit p-1 mt-4 rounded-sm text-white px-4"
               >
                 Cerrar
